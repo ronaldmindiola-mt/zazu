@@ -16,7 +16,28 @@
           }
         ],
         "type": "prompt"
-    }
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#fff",
+          "template": " \uf64f {{ .CurrentDate | date .Format }} ",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "style": "diamond",
+          "type": "time"
+        },
+        {
+          "foreground": "#DCDCDC",
+          "style": "plain",
+          "template": " \ueba2 <#00ff2a>{{ round .PhysicalPercentUsed .Precision }}</>% \uf85a <00ff2a>{{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{(div .PhysicalTotalMemory 1000000000.0) }}</>gb",
+          "type": "sysinfo"
+        }
+      ],
+      "type": "prompt"
+  }
     ],
     "transient_prompt": {
       "background": "transparent",
