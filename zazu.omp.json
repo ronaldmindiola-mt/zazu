@@ -156,7 +156,20 @@
           }
         ],
         "type": "prompt"
-    }
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "foreground": "#DCDCDC",
+            "style": "plain",
+            "template": " \uf105_",
+            "type": "text"
+          }
+        ],
+        "type": "prompt"
+      }
 
 
 
