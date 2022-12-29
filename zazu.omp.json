@@ -37,7 +37,107 @@
         }
       ],
       "type": "prompt"
-  }
+    },
+    {
+        "type": "prompt",
+        "newline": true,
+        "alignment": "left",
+        "segments": [
+          {
+            "background": "transparent",
+            "foreground": "#DCDCDC",
+            "properties": {
+              "alpine": "\uf300",
+              "arch": "\uf303",
+              "centos": "\uf304",
+              "debian": "\uf306",
+              "elementary": "\uf309",
+              "fedora": "\uf30a",
+              "gentoo": "\uf30d",
+              "linux": "\ue712",
+              "macos": "\uf179 ",
+              "manjaro": "\uf312",
+              "mint": "\uf30f",
+              "opensuse": "\uf314",
+              "raspbian": "\uf315",
+              "ubuntu": "\uf31b",
+              "windows": "\uf17a ",
+              "wsl": "\ue712"
+            },
+            "style": "plain",
+            "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
+            "type": "os"
+          },
+          {
+            "background": "#1E90FF",
+            "foreground": "#011627",
+            "powerline_symbol": "\ue0b0",
+            "style": "powerline",
+            "template": " \uf489 <#011627>{{ .Name }}</> ",
+            "type": "shell"
+          },
+          {
+            "type": "session",
+            "style": "diamond",
+            "foreground": "#DCDCDC",
+            "leading_diamond": " <#1E90FF>\uf007</>",
+            "template": " {{ if .SSHSession }}\uF817 SSH {{ end }}{{ .UserName }} <#696969>from</> <#1E90FF>\ufcbe</> {{ .HostName }} <#696969>in </>"
+          },
+
+          {
+            "background": "#1E90FF",
+            "foreground": "#DCDCDC",
+            "properties": {
+              "style": "folder",
+              "folder_separator_icon": "/",
+              "mapped_locations": {
+                "C:\\": "\uf0a0 C:\\",
+                "D:\\": "\uf0a0 D:\\",
+                "C:\\Users": "\uf007 Users",
+                "C:\\Windows": "\uf17a Windows",
+                "C:\\Windows\\System32": "\ue62a System32",
+                "D:\\.Code": "\ueac4 .Code"
+              }
+              
+            },
+            "leading_diamond": "<>\ue0b2</>",
+            "style": "diamond",
+            "template": "\ue5ff {{ path .Path .Location }}",
+            "trailing_diamond": "<#1E90FF>\ue0b0</>",
+            "type": "path"
+          },
+
+          {
+            "foreground": "#DCDCDC",
+            "style": "plain",
+            "powerline_symbol": "\uE0B0",
+            "template": " \u26a1",
+            "type": "root"
+          },
+          {
+            "foreground": "#DCDCDC",
+            "properties": {
+              "style": "roundrock",
+              "threshold": 0
+            },
+            "style": "diamond",
+            "template": "\uf017 {{ .FormattedMs }}",
+            "type": "executiontime"
+          },
+          {
+            "foreground": "#7FFF00",
+            "properties": {
+              "always_enabled": true
+            },
+            "style": "plain",
+            "type":"exit"
+          }
+  
+        ]
+    }
+
+
+
     ],
     "transient_prompt": {
       "background": "transparent",
