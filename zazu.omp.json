@@ -4,11 +4,24 @@
     "final_space": true,
     "version": 2,
     "blocks": [
-      
+      {
+        "alignment": "left",
+        "segments": [
+          {
+            "background": "transparent",
+            "foreground": "#1E90FF",
+            "template": "\uf061  ",
+            "style": "plain",
+            "type": "path"
+          }
+        ],
+        "type": "prompt"
+    }
     ],
     "transient_prompt": {
       "background": "transparent",
       "foreground": "#DCDCDC",
       "template": "\uf061 <#778899>{{ .PWD }} </>"
     }
+
   }
