@@ -170,14 +170,10 @@
         ],
         "type": "prompt"
       }
-
-
-
     ],
     "transient_prompt": {
       "background": "transparent",
       "foreground": "#DCDCDC",
       "template": "\uf061 <#778899>{{ .PWD }} </>"
     }
-
   }
