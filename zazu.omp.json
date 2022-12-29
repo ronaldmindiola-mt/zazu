@@ -121,7 +121,7 @@
                 "threshold": 0
               },
               "style": "diamond",
-              "template": "\uf017 {{ .FormattedMs }}",
+              "template": " \uf017 {{ .FormattedMs }}",
               "type": "executiontime"
             },
             {
